@@ -1,0 +1,20 @@
+//if you want to install in dev dependencies for use install line and --save-dev 
+//package under devdependencies only use in development mode.
+//if we use lot of app.get in server file then serverfile look ugly so we can use middleware(app.use).
+//Cookies and tokens are both methods used for managing sessions and authentication in web applications.
+//HttpOnly: A flag indicating that the cookie is accessible only through the HTTP protocol and cannot be accessed through JavaScript. This helps mitigate the risk of cross-site scripting (XSS) attacks.
+//SameSite: This attribute controls whether a cookie is sent with cross-site requests. It helps protect against cross-site request forgery (CSRF) attacks. The possible values are:
+Strict: The cookie is only sent in a first-party context.
+Lax: The cookie is sent with top-level navigation and not with cross-origin requests.
+None: The cookie is sent with all requests, but requires the Secure attribute if used.
+
+//daisy ui is a css component that makes write css code easy. 
+//visit tailwind glassmorphism for style like opacity , blur and saturation.
+ 
+//The <BrowserRouter> tag in react-router-dom is a higher-order component that is used to wrap the root of your application to enable client-side routing. It leverages the HTML5 history API (i.e., pushState, replaceState, and the popstate event) to keep your UI in sync with the URL.
+
+//https://react-hot-toast.com -> this website is for showing any kind 0f alert;
+
+// Zustand is a small, fast, and scalable state management library for React. It helps you manage global or local state with minimal boilerplate. It's an alternative to tools like Redux or Context API.
+
+// 
