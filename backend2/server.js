@@ -6,10 +6,27 @@ import cookieParser from "cookie-parser";
 import authRoutes from './routes/auth.routes.js';
 import messageRoutes from "./routes/message.routes.js";
 import userRoutes from "./routes/user.routes.js";
-import { server,app } from "./socket/socket.js"; 
+import groupRoutes from "./routes/group.routes.js";
+import { server,app } from "./socket/socket.js";
+import multer from "multer";
+import {v2 as cloudinary} from "cloudinary";
 
 dotenv.config();
 const port = process.env.PORT || 3000;
+
+// Initialize Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+// Configure Multer
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
+});
+
 
 // CORS configuration 
 const corsOptions = {
@@ -27,6 +44,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/group",groupRoutes);
 
 // Connect to MongoDB
 connectMongo();

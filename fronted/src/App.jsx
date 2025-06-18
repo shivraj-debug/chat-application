@@ -9,17 +9,19 @@ function App() {
     const { authuser } = useAuthContext();
 
     return (
-        <div className="p-4 h-screen  flex items-center justify-center">
+        <div className=" w-screen h-screen flex items-center justify-center">
             <Toaster />
             <Routes>
                 {/* Home Route: Authenticated users go to Home, otherwise to Login */}
-                <Route path="/" element={authuser ? <Home /> : <Navigate to="/login" />} />
+                <Route path="/" element={authuser ? <Home /> : <Navigate to="/login"/>}/>
 
                 {/* Login Route: If authenticated, redirect to Home, otherwise show Login */}
                 <Route path="/login" element={authuser ? <Navigate to="/" /> : <Login />} />
 
                 {/* Signup Route: If authenticated, redirect to login, otherwise show Signup */}
                 <Route path="/signup" element={<Signup/>} />
+
+                <Route path="*" element={<Navigate to="/login" />} />
                         
             </Routes>
         </div>

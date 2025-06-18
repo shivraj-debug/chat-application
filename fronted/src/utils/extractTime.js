@@ -1,4 +1,3 @@
-
 export function extractTime(time) {
   const date = new Date(time);
   const hours = padZero(date.getHours());

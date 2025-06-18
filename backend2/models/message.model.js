@@ -1,6 +1,7 @@
 import mongoose from "mongoose"
 
 //A Mongoose schema is a blueprint for the data, specifying the fields and their types, as well as any validation rules, default values, and other schema-level configurations.
+
 const messageSchema=new mongoose.Schema({
         senderId:{
             type:mongoose.Schema.Types.ObjectId,

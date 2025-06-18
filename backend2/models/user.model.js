@@ -32,7 +32,7 @@ const userSchema=new mongoose.Schema({
 },{timestamps:true})
 
 // Add an index for the `name` field
-userSchema.index({ fullName: 1 }); // 
+// userSchema.index({ fullName: 1 }); 
 
 const User=mongoose.model("User",userSchema);
 

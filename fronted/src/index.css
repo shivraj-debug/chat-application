@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("../public/abstract-colorful-light-background-png_110324.jpg");
+/* body{
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("/abstract-colorful-light-background-png_110324.jpg");
   background-repeat:no-repeat;
   background-size:cover ;
   background-position: center;
-}
+} */
+
 
 /* for scroll bar */
 

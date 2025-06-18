@@ -28,7 +28,6 @@ function useLogin() {
                 throw new Error(data.error);
             }
 
-            // Successful login
             localStorage.setItem('chat-user', JSON.stringify(data));
             setAuthUser(data);
             toast.success('Login successful!');
@@ -47,7 +46,6 @@ function useLogin() {
 
 export default useLogin;
 
-// Helper function to check if input is valid
 function handleInputError(username, password) {
     if (!username || !password) {
         toast.error("Please fill in both username and password.");

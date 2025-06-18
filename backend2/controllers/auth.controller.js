@@ -34,8 +34,7 @@ import generateToken from "../utils/jwttoken.js"
          // console.log(newuser)
          
          if(newuser){
-            await newuser.save(); //save the user in database
-            console.log("user created")
+            await newuser.save()
 
          res.status(201).json({
             _id:newuser._id,
@@ -47,7 +46,6 @@ import generateToken from "../utils/jwttoken.js"
       }else{
          res.status(400).json({error:"invalid user data"});
       }
-      //  await newuser.save()
    }catch(error){
          console.log("error in signup controller",error.message);
          res.status(500).json({error:"internal server error"})
@@ -76,7 +74,7 @@ import generateToken from "../utils/jwttoken.js"
          });
 
       }catch(err){
-         console.log("error in signup controller",err.message);
+         console.log("error in login controller",err.message);
          res.status(500).json({err:"internal server error"})
       }
  };
@@ -91,7 +89,7 @@ import generateToken from "../utils/jwttoken.js"
        res.status(200).json({message:"logged out successfully"})
 
     }catch(err){
-      console.log("error in signup controller",err.message);
+      console.log("error in logout controller",err.message);
       res.status(500).json({err:"internal server error"});
     }
  };

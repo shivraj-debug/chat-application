@@ -16,5 +16,3 @@ None: The cookie is sent with all requests, but requires the Secure attribute if
 //https://react-hot-toast.com -> this website is for showing any kind 0f alert;
 
 // Zustand is a small, fast, and scalable state management library for React. It helps you manage global or local state with minimal boilerplate. It's an alternative to tools like Redux or Context API.
-
-// 

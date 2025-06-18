@@ -11,14 +11,18 @@ function useGetConversation() {
                 try{
                     const res=await fetch("http://localhost:3000/api/users",{
                         method: 'GET',
-                        credentials: 'include', // Include cookies in the request
+                        credentials: 'include',
                     });
 
                     const data=await res.json();
+                    
                     if(data.error){
                         throw new Error(data.error);
                     }
-                    setConversations(data);
+
+                    setConversations(data.users);
+                    setConversations((prev) => [...prev, ...data.groups]); // Combine users and groups
+                    console.log("group",data.groups);
 
                 }catch(error){
                         toast.error(error.message);
